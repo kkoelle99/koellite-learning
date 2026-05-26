@@ -23,7 +23,7 @@
 .journey-card span {
   width: 58px;
   height: 58px;
-  background: var(--bg-color);
+  background: var(--card-color);
   border-radius: 18px;
   display: grid;
   place-items: center;

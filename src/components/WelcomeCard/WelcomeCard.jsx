@@ -22,7 +22,7 @@ function WelcomeCard({ child }) {
       <div
         className="avatar"
         style={{
-          backgroundColor: child.favoriteColor,
+          backgroundColor: child.theme.button,
         }}
       >
         {child.avatar}

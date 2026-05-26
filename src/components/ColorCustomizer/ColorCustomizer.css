@@ -1,0 +1,42 @@
+.color-customizer {
+  background: var(--card-color);
+  border: 3px solid var(--border-color);
+  border-radius: 28px;
+  padding: 24px;
+  margin-bottom: 32px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+.color-customizer p {
+  margin: 0 0 8px;
+  color: var(--muted-text);
+  font-weight: bold;
+}
+
+.color-customizer h2 {
+  margin: 0 0 18px;
+}
+
+.color-controls {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.color-controls label {
+  background: var(--card-color);
+  padding: 16px;
+  border-radius: 18px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.color-controls input {
+  width: 52px;
+  height: 42px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}

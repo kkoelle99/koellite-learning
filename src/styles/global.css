@@ -9,13 +9,17 @@ html {
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background: radial-gradient(circle at top left, var(--soft-glow), transparent 320px), var(--bg-color);
   color: var(--text-color);
 }
 
 button {
   font-family: inherit;
   cursor: pointer;
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.2s ease,
+    box-shadow 0.25s ease;
 }
 
 button:focus-visible {
@@ -25,8 +29,29 @@ button:focus-visible {
 
 .app {
   min-height: 100vh;
+  color: var(--page-text-color);
+  transition: 
+  background 0.35s ease,
+  color 0.25s ease;
 }
-
 .card-shadow {
   box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+}
+
+.welcome-card,
+.section-heading,
+.path-card,
+.journey-card,
+.subject-grid button,
+.profile-card,
+.color-customizer {
+  color: var(--text-color);
+},
+.avatar,
+.profile-avatar {
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.2s ease;
 }
