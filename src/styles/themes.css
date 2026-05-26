@@ -1,5 +1,6 @@
 :root {
   --bg-color: #fff7c7;
+  --soft-glow: #ffd6ec;
   --card-color: #ffffff;
   --button-color: #ff9fd0;
   --button-hover: #ff85c4;
@@ -7,10 +8,12 @@
   --muted-text: #666666;
   --border-color: #f2df91;
   --success-color: #7ccf8a;
+  --focus-color: #7b61ff;
 }
 
 .theme-koellite {
   --bg-color: #fff7c7;
+  --soft-glow: #ffd6ec;
   --card-color: #ffffff;
   --button-color: #ff9fd0;
   --button-hover: #ff85c4;
@@ -18,4 +21,5 @@
   --muted-text: #666666;
   --border-color: #f2df91;
   --success-color: #7ccf8a;
+  --focus-color: #7b61ff;
 }
