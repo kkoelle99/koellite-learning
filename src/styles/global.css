@@ -44,9 +44,11 @@ button:focus-visible {
 .journey-card,
 .subject-grid button,
 .profile-card,
+
 .color-customizer {
-  color: var(--text-color);
-},
+  color: var(--page-text-color);
+}
+
 .avatar,
 .profile-avatar {
   transition:
