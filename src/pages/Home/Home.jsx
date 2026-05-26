@@ -1,6 +1,6 @@
 import Header from "../../components/Header/Header";
 import WelcomeCard from "../../components/WelcomeCard/WelcomeCard";
-import GradeSelector from "../../components/GradeSelector/GradeSelector";
+import KindergartenPath from "../../components/Grades/Kindergarten/KindergartenPath.jsx";
 import LearningJourney from "../../components/LearningJourney/LearningJourney";
 import SubjectGrid from "../../components/SubjectGrid/SubjectGrid";
 
@@ -13,7 +13,7 @@ function Home() {
 
       <main className="home-page">
         <WelcomeCard childName="Mason" />
-        <GradeSelector />
+        <KindergartenPath />
         <LearningJourney />
         <SubjectGrid />
       </main>

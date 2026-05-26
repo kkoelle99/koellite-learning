@@ -1,0 +1,86 @@
+.kindergarten-section {
+  margin-bottom: 32px;
+}
+
+.section-heading {
+  background: var(--card-color);
+  border: 3px solid var(--border-color);
+  border-radius: 28px;
+  padding: 28px;
+  margin-bottom: 20px;
+}
+
+.section-heading p {
+  margin: 0 0 8px;
+  color: var(--muted-text);
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.section-heading h2 {
+  margin: 0 0 12px;
+  font-size: 2rem;
+}
+
+.section-heading span {
+  color: var(--muted-text);
+  line-height: 1.5;
+  font-size: 1.05rem;
+}
+
+.kindergarten-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.path-card {
+  background: var(--card-color);
+  border: 3px solid transparent;
+  border-radius: 24px;
+  padding: 24px;
+  text-align: left;
+  min-height: 190px;
+  transition: 0.2s ease;
+}
+
+.path-card:hover {
+  border-color: var(--button-color);
+  transform: translateY(-2px);
+}
+
+.path-card span {
+  font-size: 2.4rem;
+}
+
+.path-card strong {
+  display: block;
+  margin-top: 14px;
+  font-size: 1.3rem;
+}
+
+.path-card p {
+  margin-top: 10px;
+  color: var(--muted-text);
+  line-height: 1.5;
+}
+
+@media (max-width: 950px) {
+  .kindergarten-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .kindergarten-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading {
+    padding: 22px;
+  }
+
+  .section-heading h2 {
+    font-size: 1.7rem;
+  }
+}
