@@ -1,0 +1,21 @@
+:root {
+  --bg-color: #fff7c7;
+  --card-color: #ffffff;
+  --button-color: #ff9fd0;
+  --button-hover: #ff85c4;
+  --text-color: #2f2f2f;
+  --muted-text: #666666;
+  --border-color: #f2df91;
+  --success-color: #7ccf8a;
+}
+
+.theme-koellite {
+  --bg-color: #fff7c7;
+  --card-color: #ffffff;
+  --button-color: #ff9fd0;
+  --button-hover: #ff85c4;
+  --text-color: #2f2f2f;
+  --muted-text: #666666;
+  --border-color: #f2df91;
+  --success-color: #7ccf8a;
+}

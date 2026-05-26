@@ -1,0 +1,55 @@
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 40px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  background: var(--button-color);
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.brand p {
+  margin: 4px 0 0;
+  color: var(--muted-text);
+}
+
+.parent-button {
+  border: none;
+  background: var(--card-color);
+  padding: 14px 22px;
+  border-radius: 18px;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 800px) {
+  .top-nav {
+    padding: 20px;
+  }
+
+  .brand h1 {
+    font-size: 1.3rem;
+  }
+
+  .parent-button {
+    padding: 12px 18px;
+  }
+}

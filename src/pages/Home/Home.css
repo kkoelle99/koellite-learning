@@ -1,0 +1,14 @@
+.home-page {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  padding-bottom: 48px;
+}
+
+section {
+  margin-bottom: 32px;
+}
+
+section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 16px;
+}

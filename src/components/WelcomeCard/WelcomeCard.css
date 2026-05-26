@@ -1,0 +1,47 @@
+.welcome-card {
+  background: var(--card-color);
+  border-radius: 32px;
+  padding: 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 3px solid var(--border-color);
+  margin-bottom: 28px;
+}
+
+.welcome-small-text {
+  color: var(--muted-text);
+  font-weight: bold;
+  margin: 0 0 8px;
+}
+
+.welcome-card h2 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.welcome-message {
+  font-size: 1.2rem;
+}
+
+.avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: var(--button-color);
+  display: grid;
+  place-items: center;
+  font-size: 4rem;
+}
+
+@media (max-width: 800px) {
+  .welcome-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+  }
+
+  .welcome-card h2 {
+    font-size: 2.4rem;
+  }
+}

@@ -1,0 +1,30 @@
+.subject-section {
+  margin-bottom: 32px;
+}
+
+.subject-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.subject-grid button {
+  border: none;
+  background: var(--button-color);
+  padding: 24px;
+  border-radius: 24px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: 0.2s ease;
+}
+
+.subject-grid button:hover {
+  background: var(--button-hover);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 800px) {
+  .subject-grid {
+    grid-template-columns: 1fr;
+  }
+}

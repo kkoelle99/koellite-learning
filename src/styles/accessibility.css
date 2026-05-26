@@ -1,0 +1,8 @@
+.reduce-motion * {
+  animation: none !important;
+  transition: none !important;
+}
+
+.large-text {
+  font-size: 1.2rem;
+}
