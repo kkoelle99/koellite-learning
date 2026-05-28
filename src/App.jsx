@@ -3,6 +3,7 @@ import {BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
 import Login from "./pages/Login/Login";
 import Home from "./pages/Home/Home";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
+import ParentArea from "./pages/ParentArea/ParentArea";
 
 function App() {
   return (
@@ -19,6 +20,15 @@ function App() {
             </ProtectedRoute>
           }
           />
+
+          <Route
+          path="/parent"
+          element={
+            <ProtectedRoute>
+              <ParentArea />
+            </ProtectedRoute>
+          }
+        />
       </Routes>
     </BrowserRouter>
   )

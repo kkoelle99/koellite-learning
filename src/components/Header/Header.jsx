@@ -19,7 +19,7 @@ function Header() {
         </div>
       </div>
     <div className="header-actions">
-      <button className="parent-button">
+      <button className="parent-button" onClick={() => navigate("/parent")}>
         Parent Area
       </button>
       <button className="logout-button" onClick={handleLogout}> Logout </button>
