@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Header from "../../components/Header/Header";
 import ChildProfiles from "../../components/ChildProfiles/ChildProfiles";
@@ -10,42 +10,51 @@ import ColorCustomizer from "../../components/ColorCustomizer/ColorCustomizer";
 
 import "./Home.css";
 
+const defaultChildren = [
+  {
+    id: 1,
+    name: "Mason",
+    avatar: "😊",
+    grade: "Kindergarten",
+    theme: {
+      background: "#fff7c7",
+      button: "#ff9fd0",
+      buttonHover: "#ff85c4",
+      glow: "#ffd6ec",
+      text: "#2f2f2f",
+    },
+  },
+  {
+    id: 2,
+    name: "Lily",
+    avatar: "🎨",
+    grade: "Kindergarten",
+    theme: {
+      background: "#f5efff",
+      button: "#bda7ff",
+      buttonHover: "#a48cff",
+      glow: "#e5d6ff",
+      text: "#2f2f2f",
+    },
+  },
+];
+
 function Home() {
-  const [children, setChildren] = useState([
-    {
-      id: 1,
-      name: "Mason",
-      avatar: "😊",
-      grade: "Kindergarten",
-      theme: {
-        background: "#fff7c7",
-        button: "#ff9fd0",
-        buttonHover: "#ff85c4",
-        glow: "#ffd6ec",
-        text: "#2f2f2f",
-      },
-    },
-    {
-      id: 2,
-      name: "Lily",
-      avatar: "🎨",
-      grade: "Kindergarten",
-      theme: {
-        background: "#f5efff",
-        button: "#bda7ff",
-        buttonHover: "#a48cff",
-        glow: "#e5d6ff",
-        text:"#ffffff",
-      },
-    },
-  ]);
+  const [children, setChildren] = useState(() => {
+    const savedChildren = localStorage.getItem("koelliteChildren");
+    return savedChildren ? JSON.parse(savedChildren) : defaultChildren;
+  });
 
   const [activeChildId, setActiveChildId] = useState(children[0].id);
 
   const activeChild = children.find((child) => child.id === activeChildId);
 
+  useEffect(() => {
+    localStorage.setItem("koelliteChildren", JSON.stringify(children));
+  }, [children]);
+
   function updateChildTheme(colorType, colorValue) {
-    setChildren((currentChildren) => 
+    setChildren((currentChildren) =>
       currentChildren.map((child) =>
         child.id === activeChildId
           ? {
@@ -55,9 +64,26 @@ function Home() {
                 [colorType]: colorValue,
               },
             }
-            : child  
+          : child
       )
-          );
+    );
+  }
+
+  function resetChildTheme() {
+    setChildren((currentChildren) =>
+      currentChildren.map((child) => {
+        const defaultChild = defaultChildren.find(
+          (defaultChild) => defaultChild.id === child.id
+        );
+
+        return child.id === activeChildId
+          ? {
+              ...child,
+              theme: defaultChild.theme,
+            }
+          : child;
+      })
+    );
   }
 
   return (
@@ -86,6 +112,7 @@ function Home() {
         <ColorCustomizer
           activeChild={activeChild}
           onUpdateTheme={updateChildTheme}
+          onResetTheme={resetChildTheme}
         />
 
         <KindergartenPath />

@@ -1,6 +1,6 @@
 import "./ColorCustomizer.css";
 
-function ColorCustomizer({ activeChild, onUpdateTheme }) {
+function ColorCustomizer({ activeChild, onUpdateTheme, onResetTheme }) {
   return (
     <section className="color-customizer">
       <div>
@@ -37,6 +37,8 @@ function ColorCustomizer({ activeChild, onUpdateTheme }) {
             onChange={(event) => onUpdateTheme("text", event.target.value)}
           />
         </label>
+
+        <button className="reset-colors-button" onClick={onResetTheme}> Reset Colors </button>
       </div>
     </section>
   );
