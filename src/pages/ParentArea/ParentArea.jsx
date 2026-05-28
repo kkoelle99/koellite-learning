@@ -21,7 +21,7 @@ function ParentArea() {
         </div>
 
         <div className="parent-tools-grid">
-          <button className="parent-tool-card">
+          <button className="parent-tool-card" onClick={() => navigate("/parent/profiles")}>
             <span>👧</span>
             <strong>Manage Profiles</strong>
             <p>Add, edit, or update child learning profiles.</p>

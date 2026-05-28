@@ -4,6 +4,8 @@ import Login from "./pages/Login/Login";
 import Home from "./pages/Home/Home";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 import ParentArea from "./pages/ParentArea/ParentArea";
+import ManageProfiles from "./pages/ManageProfiles/ManageProfiles";
+
 
 function App() {
   return (
@@ -29,6 +31,15 @@ function App() {
             </ProtectedRoute>
           }
         />
+
+        <Route 
+        path="/parent/profiles"
+        element={
+          <ProtectedRoute>
+            <ManageProfiles />
+          </ProtectedRoute>
+        }
+      />
       </Routes>
     </BrowserRouter>
   )
