@@ -27,10 +27,10 @@ function ParentArea() {
             <p>Add, edit, or update child learning profiles.</p>
           </button>
 
-          <button className="parent-tool-card">
+          <button className="parent-tool-card" onClick={() => navigate("/parent/settings")}>
             <span>🎨</span>
-            <strong>Theme Settings</strong>
-            <p>Adjust child colors and personalization options.</p>
+            <strong>Settings</strong>
+            <p>Manage themes, accessibility, and parent controls.</p>
           </button>
 
           <button className="parent-tool-card">

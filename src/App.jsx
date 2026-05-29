@@ -5,7 +5,8 @@ import Home from "./pages/Home/Home";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 import ParentArea from "./pages/ParentArea/ParentArea";
 import ManageProfiles from "./pages/ManageProfiles/ManageProfiles";
-
+import Settings from "./pages/Settings/Settings";
+import ThemeSettings from "./pages/ThemeSettings/ThemeSettings";
 
 function App() {
   return (
@@ -40,6 +41,25 @@ function App() {
           </ProtectedRoute>
         }
       />
+
+      <Route
+        path="/parent/settings"
+        element={
+          <ProtectedRoute>
+            <Settings />
+          </ProtectedRoute>
+        }
+      />
+
+      <Route
+      path="/parent/settings/themes"
+      element={
+        <ProtectedRoute>
+          <ThemeSettings />
+        </ProtectedRoute>
+      }
+      />
+
       </Routes>
     </BrowserRouter>
   )
