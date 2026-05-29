@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import Header from "../../components/Header/Header";
 import ChildProfiles from "../../components/ChildProfiles/ChildProfiles";
@@ -10,42 +11,25 @@ import ColorCustomizer from "../../components/ColorCustomizer/ColorCustomizer";
 
 import "./Home.css";
 
-const defaultChildren = [
-  {
-    id: 1,
-    name: "Mason",
-    avatar: "😊",
-    grade: "Kindergarten",
-    theme: {
-      background: "#fff7c7",
-      button: "#ff9fd0",
-      buttonHover: "#ff85c4",
-      glow: "#ffd6ec",
-      text: "#2f2f2f",
-    },
-  },
-  {
-    id: 2,
-    name: "Lily",
-    avatar: "🎨",
-    grade: "Kindergarten",
-    theme: {
-      background: "#f5efff",
-      button: "#bda7ff",
-      buttonHover: "#a48cff",
-      glow: "#e5d6ff",
-      text: "#2f2f2f",
-    },
-  },
-];
+const defaultTheme = {
+  background: "#fff7c7",
+  button: "#ff9fd0",
+  buttonHover: "#ff85c4",
+  glow: "#ffd6ec",
+  text: "#2f2f2f",
+};
+
+const defaultChildren = [];
 
 function Home() {
+
+  const navigate = useNavigate();
   const [children, setChildren] = useState(() => {
     const savedChildren = localStorage.getItem("koelliteChildren");
     return savedChildren ? JSON.parse(savedChildren) : defaultChildren;
   });
 
-  const [activeChildId, setActiveChildId] = useState(children[0].id);
+  const [activeChildId, setActiveChildId] = useState(children[0]?.id || null);
 
   const activeChild = children.find((child) => child.id === activeChildId);
 
@@ -70,21 +54,38 @@ function Home() {
   }
 
   function resetChildTheme() {
-    setChildren((currentChildren) =>
-      currentChildren.map((child) => {
-        const defaultChild = defaultChildren.find(
-          (defaultChild) => defaultChild.id === child.id
-        );
+  setChildren((currentChildren) =>
+    currentChildren.map((child) =>
+      child.id === activeChildId
+        ? {
+            ...child,
+            theme: defaultTheme,
+          }
+        : child
+    )
+  );
+}
 
-        return child.id === activeChildId
-          ? {
-              ...child,
-              theme: defaultChild.theme,
-            }
-          : child;
-      })
-    );
-  }
+if (!activeChild) {
+  return (
+    <div className="app theme-koellite">
+      <Header />
+
+      <main className="home-page">
+        <section className="welcome-card">
+          <div>
+            <p className="welcome-small-text">Welcome to Koellite Learning</p>
+            <h2>No child profiles yet</h2>
+            <p className="welcome-message">
+              Add a child profile in the Parent Area to get started.
+            </p>
+            <button className="parent-button" onClick={() => navigate("/parent/profiles")}>Add Child Profile</button>
+          </div>
+        </section>
+      </main>
+    </div>
+  );
+}
 
   return (
     <div

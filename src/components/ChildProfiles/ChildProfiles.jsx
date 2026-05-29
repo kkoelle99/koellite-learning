@@ -1,6 +1,11 @@
+import { useNavigate } from "react-router-dom";
+
 import "./ChildProfiles.css";
 
 function ChildProfiles({ children, activeChildId, onSelectChild }) {
+
+  const navigate = useNavigate();
+
   return (
     <section className="profiles-section">
       <div className="profiles-header">
@@ -28,7 +33,8 @@ function ChildProfiles({ children, activeChildId, onSelectChild }) {
           </button>
         ))}
 
-        <button className="profile-card add-profile">
+        <button className="profile-card add-profile"
+        onClick={() => navigate("/parent/profiles")}>
           <div className="profile-avatar">➕</div>
           <strong>Add Profile</strong>
         </button>

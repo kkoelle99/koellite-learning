@@ -35,13 +35,13 @@ function ParentArea() {
 
           <button className="parent-tool-card">
             <span>📊</span>
-            <strong>Progress Reports</strong>
+            <strong>Progress Reports (Coming Soon) </strong>
             <p>View completed activities and learning growth.</p>
           </button>
 
           <button className="parent-tool-card">
             <span>⚙️</span>
-            <strong>Accessibility</strong>
+            <strong>Accessibility (Coming Soon)</strong>
             <p>Control motion, sound, text size, and calm mode.</p>
           </button>
         </div>
