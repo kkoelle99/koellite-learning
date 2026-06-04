@@ -7,6 +7,7 @@ import ParentArea from "./pages/ParentArea/ParentArea";
 import ManageProfiles from "./pages/ManageProfiles/ManageProfiles";
 import Settings from "./pages/Settings/Settings";
 import ThemeSettings from "./pages/ThemeSettings/ThemeSettings";
+import AccessibilitySettings from "./pages/AccessibilitySettings/AccessibilitySettings";
 
 function App() {
   return (
@@ -56,6 +57,15 @@ function App() {
       element={
         <ProtectedRoute>
           <ThemeSettings />
+        </ProtectedRoute>
+      }
+      />
+
+      <Route
+      path="/parent/settings/accessibility"
+      element={
+        <ProtectedRoute>
+          <AccessibilitySettings />
         </ProtectedRoute>
       }
       />

@@ -12,8 +12,11 @@ import "./Home.css";
 
 const defaultChildren = [];
 
+
 function Home() {
   const navigate = useNavigate();
+
+  const accessibilitySettings = JSON.parse(localStorage.getItem("koelliteAccessibilitySettings")) || {};
 
   const [children] = useState(() => {
     const savedChildren = localStorage.getItem("koelliteChildren");
@@ -26,7 +29,7 @@ function Home() {
 
   if (!activeChild) {
     return (
-      <div className="app theme-koellite">
+      <div className={`app theme-koellite ${accessibilitySettings.largeText ? "large-text" : ""}`}>
         <Header />
 
         <main className="home-page">
@@ -53,7 +56,7 @@ function Home() {
 
   return (
     <div
-      className="app theme-koellite"
+      className={`app theme-koellite ${accessibilitySettings.largeText ? "large-text" : ""}`}
       style={{
         background: `radial-gradient(circle at top left, ${activeChild.theme.glow}, transparent 320px), ${activeChild.theme.background}`,
         "--bg-color": activeChild.theme.background,

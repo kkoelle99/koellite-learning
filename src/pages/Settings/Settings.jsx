@@ -30,10 +30,10 @@ function Settings() {
             <p>Customize each child’s colors and learning space.</p>
           </button>
 
-          <button className="settings-card coming-soon-card">
+          <button className="settings-card" onClick={() => navigate("/parent/settings/accessibility")}>
             <span>♿</span>
             <strong>Accessibility</strong>
-            <p>Coming soon: calm mode, text size, sound, and motion settings.</p>
+            <p>Control motion, text size, timers, and sensory settings.</p>
           </button>
 
           <button className="settings-card coming-soon-card">
