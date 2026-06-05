@@ -36,10 +36,10 @@ function Settings() {
             <p>Control motion, text size, timers, and sensory settings.</p>
           </button>
 
-          <button className="settings-card coming-soon-card">
+          <button className="settings-card" onClick={() => navigate("/parent/settings/progress")}>
             <span>📊</span>
             <strong>Progress Reports</strong>
-            <p>Coming soon: view completed lessons and learning growth.</p>
+            <p>View completed lessons, subject growth, and learning progress.</p>
           </button>
         </div>
       </section>
