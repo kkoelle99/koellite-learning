@@ -27,3 +27,28 @@
 .large-text select {
   font-size: 1.15rem;
 }
+
+.reduce-motion button:hover,
+.reduce-motion .profile-card:hover,
+.reduce-motion .path-card:hover,
+.reduce-motion .journey-card:hover,
+.reduce-motion .settings-card:hover,
+.reduce-motion .parent-tool-card:hover {
+  transform: none !important;
+}
+
+.calm-mode .path-card,
+.calm-mode .journey-card,
+.calm-mode .welcome-card,
+.calm-mode .settings-card,
+.calm-mode .parent-tool-card {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+}
+
+.calm-mode .app {
+  background-image: none !important;
+}
+
+.timers-disabled .timer-feature {
+  display: none;
+}

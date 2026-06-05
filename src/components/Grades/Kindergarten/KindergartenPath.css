@@ -86,3 +86,14 @@
     font-size: 1.7rem;
   }
 }
+
+.timer-notice {
+  background: var(--card-color);
+  border: 3px solid var(--button-color);
+  border-radius: 22px;
+  padding: 16px 20px;
+  margin-bottom: 18px;
+  font-weight: bold;
+  color: #2f2f2f; /* force readable text */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}

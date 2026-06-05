@@ -11,6 +11,10 @@ function KindergartenPath() {
         </span>
       </div>
 
+            <div className="timer-feature timer-notice">
+        ⏱ Timed practice is available.
+      </div>
+
       <div className="kindergarten-grid">
         <button className="path-card">
           <span>🔤</span>

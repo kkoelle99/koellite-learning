@@ -29,7 +29,7 @@ function Home() {
 
   if (!activeChild) {
     return (
-      <div className={`app theme-koellite ${accessibilitySettings.largeText ? "large-text" : ""}`}>
+      <div className={`app theme-koellite ${accessibilitySettings.largeText ? "large-text" : ""} ${accessibilitySettings.reduceMotion ? "reduce-motion" : ""} ${accessibilitySettings.calmMode ? "calm-mode" : ""} ${!accessibilitySettings.timersEnabled ? "timers-disabled" : ""}`}>
         <Header />
 
         <main className="home-page">
@@ -56,7 +56,7 @@ function Home() {
 
   return (
     <div
-      className={`app theme-koellite ${accessibilitySettings.largeText ? "large-text" : ""}`}
+      className={`app theme-koellite ${accessibilitySettings.largeText ? "large-text" : ""} ${accessibilitySettings.reduceMotion ? "reduce-motion" : ""} ${accessibilitySettings.calmMode ? "calm-mode" : ""} ${!accessibilitySettings.timersEnabled ? "timers-disabled" : ""}`}
       style={{
         background: `radial-gradient(circle at top left, ${activeChild.theme.glow}, transparent 320px), ${activeChild.theme.background}`,
         "--bg-color": activeChild.theme.background,
