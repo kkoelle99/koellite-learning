@@ -30,6 +30,7 @@ function ChildProfiles({ children, activeChildId, onSelectChild }) {
             </div>
 
             <strong>{child.name}</strong>
+            <p>{child.grade}</p>
           </button>
         ))}
 

@@ -36,9 +36,9 @@ function Home() {
           <section className="welcome-card empty-profile-card">
             <div>
               <p className="welcome-small-text">Welcome to Koellite Learning</p>
-              <h2>No child profiles yet</h2>
+              <h2>Lets create your first learner profile!!</h2>
               <p className="welcome-message">
-                Add a child profile in the Parent Area to get started.
+                Add a child profile to personalize Koellite Learning with their name, grade, avatar, and learning colors. You can create multiple profiles for siblings or different learning stages. Each profile will have its own themes, progress tracking, and settings to make learning fun and personalized!
               </p>
 
               <button
