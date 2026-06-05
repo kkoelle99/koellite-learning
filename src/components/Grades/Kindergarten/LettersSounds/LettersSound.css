@@ -1,0 +1,91 @@
+.letters-page {
+  min-height: 100vh;
+  padding: 32px;
+  background:
+    radial-gradient(circle at top left, var(--soft-glow), transparent 320px),
+    var(--bg-color);
+}
+
+.letters-container {
+  width: min(1000px, 94%);
+  margin: 0 auto;
+}
+
+.letters-header {
+  background: var(--card-color);
+  border: 3px solid var(--border-color);
+  border-radius: 28px;
+  padding: 32px;
+  margin-bottom: 24px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+.letters-header p {
+  margin: 0 0 8px;
+  color: var(--muted-text);
+  font-weight: bold;
+}
+
+.letters-header h1 {
+  margin: 0 0 12px;
+  font-size: 2.4rem;
+}
+
+.letters-header span {
+  color: var(--muted-text);
+  line-height: 1.5;
+}
+
+.letters-lessons-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.lesson-card {
+  background: var(--card-color);
+  border: 3px solid transparent;
+  border-radius: 24px;
+  padding: 28px;
+  min-height: 190px;
+  text-align: left;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+.lesson-card:hover {
+  border-color: var(--button-color);
+  transform: translateY(-2px);
+}
+
+.lesson-card span {
+  font-size: 2.4rem;
+}
+
+.lesson-card strong {
+  display: block;
+  margin-top: 14px;
+  font-size: 1.35rem;
+}
+
+.lesson-card p {
+  color: var(--muted-text);
+  line-height: 1.5;
+}
+
+.coming-soon-lesson {
+  opacity: 0.75;
+}
+
+@media (max-width: 700px) {
+  .letters-page {
+    padding: 20px;
+  }
+
+  .letters-lessons-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .letters-header {
+    padding: 24px;
+  }
+}

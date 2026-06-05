@@ -1,0 +1,50 @@
+.activity-page {
+  min-height: 100vh;
+  padding: 32px;
+  background:
+    radial-gradient(circle at top left, var(--soft-glow), transparent 320px),
+    var(--bg-color);
+}
+
+.activity-container {
+  width: min(800px, 94%);
+  margin: 0 auto;
+}
+
+.activity-header,
+.question-card {
+  background: var(--card-color);
+  border: 3px solid var(--border-color);
+  border-radius: 28px;
+  padding: 32px;
+  margin-bottom: 24px;
+  text-align: center;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+}
+
+.letter-display {
+  font-size: 8rem;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.answer-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.answer-grid button {
+  padding: 20px;
+  border: none;
+  border-radius: 18px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: var(--button-color);
+}
+
+.feedback-message {
+  margin-top: 24px;
+  font-size: 1.25rem;
+  font-weight: bold;
+}

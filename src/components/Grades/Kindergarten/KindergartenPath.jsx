@@ -1,6 +1,12 @@
+import { useNavigate } from "react-router-dom";
+
 import "./KindergartenPath.css";
 
+
 function KindergartenPath() {
+
+  const navigate = useNavigate();
+
   return (
     <section className="kindergarten-section">
       <div className="section-heading">
@@ -15,7 +21,7 @@ function KindergartenPath() {
         ⏱ Timed practice is available.
       </div>
 
-      <div className="kindergarten-grid">
+      <div className="kindergarten-grid" onClick={() => navigate("/parent/letters-sounds")}>
         <button className="path-card">
           <span>🔤</span>
           <strong>Letters & Sounds</strong>

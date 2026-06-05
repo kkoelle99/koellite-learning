@@ -9,6 +9,10 @@ import Settings from "./pages/Settings/Settings";
 import ThemeSettings from "./pages/ThemeSettings/ThemeSettings";
 import AccessibilitySettings from "./pages/AccessibilitySettings/AccessibilitySettings";
 import ProgressReports from "./pages/ProgressReports/ProgressReports";
+import LettersSounds from "./components/Grades/Kindergarten/LettersSounds/LettersSound";
+import LetterRecognition from "./components/Grades/Kindergarten/LetterRecognition/LetterRecognition";
+
+
 
 function App() {
   return (
@@ -76,6 +80,24 @@ function App() {
       element={
         <ProtectedRoute>
           <ProgressReports />
+        </ProtectedRoute>
+      }
+      />
+
+      <Route
+      path="/parent/letters-sounds"
+      element={
+        <ProtectedRoute>
+          <LettersSounds />
+        </ProtectedRoute>
+      }
+      />
+
+      <Route
+      path="/parent/letter-recognition"
+      element={
+        <ProtectedRoute>
+          <LetterRecognition />
         </ProtectedRoute>
       }
       />
